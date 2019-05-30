@@ -1,0 +1,328 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .header
+    .owl-carousel
+      .owl-nav
+        .owl-prev
+          left: -36px
+          top: -310px
+        .owl-next
+          right: -965px
+          top: -310px
+    .menu
+      margin-top: 55px
+      ul
+        display: flex
+        flex-direction: wrap
+        justify-content: flex-end
+        li
+          margin-left: 10px
+
+  .section-realization
+    background-size: calc(1230px - 20%)
+    .post-title
+      margin-bottom: 442px
+
+  .section-projects
+    .project-img__hover
+      top: 104px
+      left: 104px
+
+  .section-posts
+    .post-item
+      .post-title-block
+        &__post-title
+          font-size: 13px
+
+  .section-footer
+    .f-block:last-child
+      margin-top: 0px
+      margin-bottom: 90px
+      
+// ≥992px
++media-breakpoint-down(md)
+  .header
+    .owl-carousel
+      .owl-nav
+        .owl-prev
+          left: -43px
+          top: -310px
+        .owl-next
+          right: -734px
+          top: -310px
+    .menu
+      margin-top: 55px
+      ul
+        display: flex
+        flex-direction: wrap
+        justify-content: center
+        li
+          margin-left: 10px
+
+  .section-services
+    .text-center:last-child
+      .s-icon
+        margin-top: 0
+
+  .section-realization
+    background-size: calc(984px - 20%)
+    .post-title
+      margin-bottom: 359px
+      p
+        width: 100%
+
+  .section-blacktheme
+    .button-purchase
+      font-size: 16px
+    .title
+      font-size: 23px
+    .post-title
+      font-size: 17px
+
+  .section-projects
+    .project-img__hover
+      top: 113px
+      left: 121px
+
+  .section-excellent
+    .e-title-wrapper
+      margin-left: 0
+      text-align: center
+    .features-wrapper
+      margin-left: 20%
+      margin-bottom: 674px
+    .iphone
+      position: absolute
+      left: 50%
+      margin-left: -185px  
+    
+  .section-posts
+    .po-post-title
+      p
+        width: 100%
+    .post-item
+      .post-title-block
+        &__post-title
+          font-size: 14px
+
+  .section-partners
+    .partners
+      .partner:last-child
+        margin-top: 0
+  
+  .section-footer
+    .f-block:last-child
+      margin-top: 0px
+      margin-bottom: 90px
+    .f-block:nth-child(3)
+      margin-top: 0px
+      margin-bottom: 90px
+  .footer-bottom-bg
+    .footer-bottom
+      justify-content: center
+      flex-direction: column
+      text-align: center
+      .copyright
+        margin-bottom: 0px
+      .designby
+        margin-top: 0px
+// ≥768px
++media-breakpoint-down(sm)
+  .header
+    .owl-carousel
+      .owl-nav
+        display: none
+      .owlcarousel-slogan
+        font-size: 28px
+      .h1
+        font-size: 38px
+      .post-h1
+        width: 500px
+    .menu
+      display: none
+    .hamburger
+      top: 43px
+      right: 25px
+      display: block
+
+  .section-services
+    .text-center:nth-child(3)
+      .s-icon
+        margin-top: 0
+
+  .section-realization
+    background-size: calc(787px - 20%)
+    .post-title
+      margin-bottom: 300px
+
+  .section-blacktheme
+    .button-purchase
+      font-size: 15px
+      padding: 12px 40px
+    .title
+      font-size: 23px
+
+  .section-blacktheme
+    .button-purchase
+      font-size: 15px
+      margin-top: 85px
+    .title
+      font-size: 22px
+    .post-title
+      font-size: 16px
+
+  .section-projects
+    .project-img
+      width: 370px
+      margin-left: auto
+      margin-right: auto
+    .buttons-project
+      .b-project
+        margin-top: 10px
+  
+  .section-video
+    .v-post-title
+      width: 500px
+
+  .section-excellent
+    .e-title-wrapper
+      margin-left: 0
+      text-align: center
+    .features-wrapper
+      margin-left: 10%
+      margin-bottom: 674px
+      white-space: normal
+    .iphone
+      position: absolute
+      left: 50%
+      margin-left: -185px
+
+  .section-counters
+    .counters-row
+      flex-wrap: wrap
+      justify-content: space-evenly
+    .counters-item
+      &:last-child, &:nth-child(4)
+        margin-top: 0
+
+  .section-partners
+    .partners
+      .partner:last-child
+        margin-top: 0
+      .partner:nth-child(3)
+        margin-top: 0
+
+  .section-footer
+    .four-blocks
+      .f-block
+        margin-top: 0px
+        width: 100%
+        &:nth-child(3)
+          margin-bottom: 20px
+        &:first-child
+          margin-top: 100px
+          margin-bottom: 20px
+
+  .section-footer
+    .four-blocks
+      .dribble-widget
+        text-align: center
+        .dribble-block
+          justify-content: space-evenly
+// ≥576px
++media-breakpoint-down(xs)
+  .header
+    .owl-carousel
+      .owlcarousel-slogan
+        font-size: 22px
+      .h1
+        font-size: 33px
+      .post-h1
+        width: 100%
+    .logo-title
+      display: none
+    .icons
+      right: 10px
+    .hamburger
+      right: 50px
+      
+  .section-services
+    .s-icon
+      margin-top: 0
+    .text-center:first-child
+      .s-icon
+        margin-top: 80px
+
+  .section-blacktheme
+    .button-purchase
+      margin-top: 0px
+      margin-bottom: 70px
+    .title
+      text-align: center
+    .post-title
+      text-align: center
+
+  .section-projects
+    .project-img
+      width: 300px
+      margin-left: auto
+      margin-right: auto
+    .buttons-project
+      .b-project
+        margin-top: 10px
+        padding: 5px 7px
+
+  .section-video
+    .v-post-title
+      width: 100%
+
+  .section-excellent
+    .e-title-wrapper
+      margin-left: 0
+      text-align: center
+    .features-wrapper
+      margin-left: 10%
+      margin-bottom: 540px
+      font-size: 15px
+      white-space: normal
+    .iphone
+      position: absolute
+      left: 50%
+      margin-left: -156px
+      img
+        width: 315px
+        height: 510px
+
+  .section-counters
+    .counters-row
+      justify-content: center
+      flex-wrap: wrap
+    .counters-item
+      flex-basis: 100%
+      &:last-child, &:nth-child(4), &:nth-child(3), &:nth-child(2)
+        margin-top: 0
+        
+  .section-partners
+    .partners
+      .partner:nth-child(2)
+        margin-top: 0
+
+      
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,784 @@
+@import "_fonts.sass"
+@import "_vars.sass"
+@import "_libs.sass"
+
+*
+	padding: 0
+	margin: 0
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.4
+
+li
+	list-style: none
+
+.text-center
+	text-align: center
+	
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: bold
+    
+
+// Default Styles
+
+.header
+	background: url("../img/src/bg-header.png") no-repeat 0 0
+	background-size: cover
+	position: relative
+	.container
+		position: relative
+	&:after
+		content: ''
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		position: absolute
+		background: rgba(#000, .5)
+	.section-inner
+		display: flex
+		position: relative
+		z-index: 10
+	.logo
+		display: flex
+		margin-top: 35px
+	.logo-title
+		color: #ffffff
+		+font('RaleWay', 400)
+		font-size: 30px
+		margin-top: 5px
+	.menu
+		margin-top: 55px
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: flex-end
+			li
+				margin-left: 20px
+				a
+					+font('Montserrat', 300)
+					font-size: 15px
+					color: #fff
+					text-decoration: none
+					&:hover
+						color: $accent
+	.icons
+		display: flex
+		margin-top: 55px
+		position: absolute
+		right: 0
+		.icon-cart
+		.icon-search
+			margin-left: 15px
+	.hamburger
+		position: absolute
+		top: 40px
+		right: 20px
+		display: none
+		.hamburger-box
+			position: absolute
+			right: 0
+	.drop-down-menu
+		width: 180px
+		height: 297px
+		background: rgba($accent, .85)
+		border-radius: 5px
+		position: absolute
+		top: 96px
+		right: -18px
+		z-index: 11
+		display: none
+	.menu-active
+		display: block
+		.menu-item
+			display: block
+			color: #fff
+			text-decoration: none
+			+font('Montserrat', 400)
+			font-size: 16px
+			text-transform: uppercase
+			padding: 5px 35px
+			border-bottom: 1px solid #fff
+			transition: background .25s ease, color .25s ease
+			&:last-child
+				border: none
+			&:hover
+				background: #fff
+				color: $accent
+
+
+	.carousel1
+		margin-top: 240px
+		text-align: center
+		position: relative
+		z-index: 10
+		color: #fff
+		.owlcarousel-slogan
+			+font('RaleWay', 500)
+			font-size: 30px
+		.h1
+			+font('Raleway', 800)
+			font-size: 43px
+		.post-h1
+			display: block
+			width: 600px
+			margin: auto
+		.button-get
+			@extend .button
+			font-size: 15px
+			text-transform: uppercase
+			+font('Raleway', 800)
+			letter-spacing: 0
+			padding: 14px 40px
+			margin-top: 40px
+		.owl-nav
+			position: absolute
+			.owl-prev, .owl-next
+				background: none
+				position: absolute
+				outline: none
+				&:hover
+					color: $accent
+				span
+					font-size: 150px
+			.owl-prev
+				left: -50px
+				top: -310px
+			.owl-next
+				right: -1162px
+				top: -310px
+				
+				
+				
+			
+				
+					
+		.owl-dots
+			margin-top: 300px
+			margin-bottom: 40px
+			button
+				outline: none
+			.owl-dot.active
+				span
+					background: #000
+					border: 1px solid $accent
+					transform: scale(1.3)
+					transition: transform .25s ease
+				
+
+
+// Header
+
+.section-services
+	.section-inner
+	.s-icon
+		margin-top: 80px
+		height: 60px
+	.title
+		+font('Raleway', 600)
+		font-size: 20px
+		color: #555
+	.post-title
+		margin-top: 19px
+		+font('Montserrat', 400)
+		font-size: 14px
+		color: #8c8c8c
+	.bottom-line
+		width: 70px
+		height: 3px
+		background: silver
+		margin: auto
+		margin-top: 25px
+		margin-bottom: 80px
+	.text-center:nth-child(2)
+		.bottom-line
+			background: $accent
+
+// Services
+
+.section-realization
+	background: #fbfaf8 url("../img/src/bg-realiz.png") no-repeat
+	background-position: 50% 100%
+	.section-inner
+	.title
+		margin-top: 83px
+		+font('Raleway', 700)
+		color: #555555
+		font-size: 27px
+	.post-title
+		margin-top: 24px
+		margin-bottom: 50%
+		p
+			display: block
+			width: 68%
+			margin: auto
+
+
+// Realization
+
+.section-blacktheme
+	background: #111
+	.section-inner
+	.title
+		+font('Raleway', 400)
+		font-size: 26px
+		color: #fff
+		margin-top: 50px
+		em
+			color: $accent
+			font-style: normal
+	.post-title
+		+font('Montserrat', 300)
+		font-size: 17px
+		color: #999
+		margin-bottom: 50px
+	.button-purchase
+		@extend .button
+		letter-spacing: 0px
+		font-size: 16px
+		padding: 12px 40px
+		margin-top: 65px
+		white-space: nowrap
+
+// Blacktheme
+
+.section-projects
+	.section-inner
+	.title
+		margin-top: 81px
+		+font('Raleway', 700)
+		font-size: 28px
+		color: #555
+	.post-title
+		+font('Montserrat', 300)
+		font-size: 16px
+		color: #8c8c8c
+		margin-top: 24px
+	.buttons-project
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin-top: 30px
+		margin-bottom: 40px
+		.b-project
+			display: block
+			border: 1px solid silver
+			border-radius: 5px
+			padding: 3px 10px
+			text-decoration: none
+			color: inherit
+			margin-left: 10px
+			transition: all .25s ease
+		.active
+			background: $accent
+			color: #fff
+	.project-img
+		overflow: hidden
+		position: relative
+		height: 331px
+		margin-bottom: 20px
+		&:before
+			content: ''
+			bottom: 94px
+			left: 30px
+			border-left: 14px solid transparent
+			border-right: 14px solid transparent
+			border-bottom: 10px solid #fbfaf8
+			position: absolute
+		&:hover img
+			filter: brightness(60%)
+			transition: all .45s ease
+		&:hover .project-img__title
+			background: #111
+			transition: all .45s ease
+		&:hover .p-title
+			color: #d1d1d1
+			transition: all .45s ease
+		&:hover .p-post-title
+			color: #c7b299
+			transition: all .45s ease
+		&:hover .project-img__hover
+			opacity: 1
+			transition: all .45s ease
+	.project-img__title
+		background: #fbfaf8
+		position: absolute
+		width: 370px
+		.p-title
+			+font('Raleway', 500)
+			font-size: 18px
+			color: #c7b299
+			padding: 15px 0 0 20px
+		.p-post-title
+			+font('Montserrat', 300)
+			font-size: 14px
+			color: #d1d1d1
+			padding: 0 0 20px 20px		
+	.project-img__hover
+		position: absolute
+		top: 104px
+		left: 132px
+		opacity: 0
+		.fas
+			font-size: 28px
+			color: #fff
+			margin-left: 10px
+			cursor: pointer
+			&:hover
+				color: $accent
+				transition: color .25s ease
+	.button-load
+		@extend .button 
+		+font('Raleway', 800)
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: 0px
+		padding: 12px 38px
+		margin-top: 20px
+		margin-bottom: 80px
+
+
+// Projects
+
+.section-video
+	background: url("../img/src/bg-video.png")
+	background-size: cover
+	color: #fff
+	position: relative
+	&:after
+		content: ''
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		position: absolute
+		background: rgba(#000, .5)
+	.section-inner
+		position: relative
+		z-index: 10
+	.button-play
+		margin-top: 210px
+		display: block
+		width: 100px
+		margin-left: auto
+		margin-right: auto
+	.v-title
+		margin-top: 44px
+		+font('Raleway', 500)
+		font-size: 27px
+	.v-post-title
+		margin-top: 29px
+		width: 552px
+		+font('Montserrat', 300)
+		font-size: 16px
+		margin-left: auto
+		margin-right: auto
+	.duration
+		margin-top: 40px
+		margin-bottom: 207px
+		+font('Montserrat', 400)
+		font-size: 14px
+		color: #c7b299
+
+// Video
+
+.section-excellent
+	.section-inner
+	.container
+		position: relative
+	.iphone
+		position: absolute
+		bottom: 0
+		left: 0
+	.e-title-wrapper
+		margin-left: 35%
+	.e-title
+		+font('Raleway', 700)
+		font-size: 27p
+		color: #555
+		margin-top: 200px
+		display: block
+	.e-post-title
+		+font('Montserrat', 300)
+		font-size: 16px
+		color: #8c8c8c
+		margin-top: 20px
+		p
+			display: block
+			width: 100%
+	.features-wrapper
+		margin-left: 44%
+		margin-bottom: 183px
+		margin-top: 15px
+		white-space: nowrap
+	.features
+		display: block
+		li
+			position: relative
+			&:before
+				content: ''
+				display: inline-block
+				background-image: url('../img/src/before-arrow.svg')
+				background-position: 50% 100%
+				width: 21px
+				height: 21px
+				position: absolute
+				left: -35px
+	
+
+// Iphone
+
+.section-counters
+	background: linear-gradient(to right, #211b19 0%, #4e3427 100%)
+	.section-inner
+	.counters-row
+		display: flex
+		justify-content: space-evenly
+	.counters-item
+		display: flex
+		flex-direction: column
+		width: 132px
+		height: 171px
+		white-space: nowrap
+		text-align: center
+		margin-top: 69px
+		margin-bottom: 60px
+	.coun-icon
+	.number
+		margin-top: 10px
+		+font('Montserrat', 200)
+		font-size: 45px
+		color: #ffffff
+
+	.counters-title
+		+font('Montserrat', 300)
+		font-size: 14px
+		text-transform: uppercase
+		color: #c7b299
+	.counters-bottom-line
+		width: 30px
+		height: 2px
+		background: #fff
+		margin: auto
+		margin-top: 17px
+
+
+// Counters
+
+.section-posts
+	.section-inner
+	.po-title
+		+font('Raleway', 700)
+		font-size: 27px
+		color: #555555
+		margin-top: 82px
+	.po-post-title
+		+font('Montserrat', 300)
+		font-size: 16px
+		color: #8c8c8c
+		margin-top: 20px
+		margin-bottom: 30px
+		p
+			display: block
+			width: 757px
+			margin: auto
+	.carousel2
+	.post-item
+		position: relative
+		&:hover img
+			filter: brightness(40%)
+			transition: filter .5s ease
+		&:hover .post-date
+			background: #c7b299
+			transition: background .25s ease
+		&:hover .post-month
+			background: #a48d72
+			transition: background .25s ease 
+		&:hover .post-title-block
+			background: #362f2d
+			border-color: #362f2d 
+			transition: background .25s ease, border-color .25s ease
+		&:hover .post-title-block__title
+			color: #c7b299
+			transition: color .25s ease
+		&:hover .post-title-block__post-title
+			color: #fff
+			transition: color .25s ease
+		.post-img
+		.post-day
+			position: absolute
+			top: 10px
+			left: 10px
+			text-align: center
+			color: #fff
+			background: rgba(#000, .5)
+			border-radius: 5px
+			.post-date
+				font-size: 23px
+				+font('Montserrat', 300)
+				padding: 1px 10px
+			.post-month
+				padding: 3px 5px 3px 5px
+				font-size: 12px
+				+font('Roboto', 400)
+		.post-title-block
+			border: 1px solid #f8f8f8
+			box-sizing: border-box
+			&__title
+				color: #555
+				+font('Raleway', 500)
+				font-size: 20px
+				padding: 15px 0px 3px 15px
+			&__post-title
+				padding: 0px 0px 7px 15px
+				+font('Montserrat', 300)
+				color: #8c8c8c
+				font-size: 14px
+			.post-readmore
+				+font('Montserrat', 300)
+				font-size: 14px
+				color: #c7b299
+				cursor: pointer
+				padding-bottom: 7px
+	.owl-nav
+		font-size: 40px
+		margin-bottom: 35px
+		margin-top: 5px
+		.owl-prev
+			outline: none
+			&:hover
+				background: none
+				color: #c7b299
+		.owl-next
+			outline: none
+			&:hover
+				background: none
+				color: #c7b299
+
+// Posts
+
+.section-partners
+	background: url('../img/src/bg-partners.png') no-repeat
+	background-size: cover
+	position: relative
+	&:after
+		content: ''
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		position: absolute
+		background: rgba(#000, .5)
+	.section-inner
+		position: relative
+		z-index: 10
+	.partners
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+	.partner
+		width: 220px
+		text-align: center
+		margin-top: 140px
+		margin-bottom: 140px
+		align-self: center
+
+// Partners
+
+.section-footer
+	background: #191919
+	.section-inner
+	.four-blocks
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		.f-block
+			margin-top: 107px
+			margin-left: 10px
+		.about-waxom
+			width: 250px
+			.f-logo
+				display: flex
+				img
+				.f-post-logo
+					font-size: 33px
+					+font('Raleway', 400)
+					color: #fff
+					letter-spacing: -1
+			.f-logo-text
+				+font('Montserrat', 400)
+				font-size: 14px
+				color: #555
+				margin-top: 30px
+			.f-readmore
+				+font('Montserrat', 400)
+				font-size: 14px
+				color: #d1d1d1
+				margin-top: 15px
+				cursor: pointer
+
+		.recent-post
+			width: 262px
+			.recent-title
+				color: #fff
+				+font('Raleway', 700)
+				font-size: 22px 
+				margin-bottom: 15px
+			.recent-miniblock
+				margin-bottom: 15px
+				border-bottom: 1px solid #666
+				&:last-child
+					border: none
+				&:hover .recent-date
+					color: #ffffff
+					transition: all .25s ease
+				&:hover .recent-text
+					color: #c7b299
+					transition: all .25s ease
+			.recent-date
+				+font('Montserrat', 300)
+				font-size: 12px
+				color: #999
+			.recent-text
+				+font('Montserrat', 300)
+				font-size: 13px
+				color: #555555
+				padding:
+					bottom: 15px
+				
+
+		.twitter
+			width: 259px
+			.twitter-title
+				+font('Raleway', 700)
+				font-size: 23px
+				color: #fff
+			.twitter-block
+				font-size: 14px
+				+font('Montserrat', 300)
+				color: #555
+				margin-top: 15px
+				em
+					font-style: normal
+					color: #00bff3
+					cursor: pointer 
+			.twitter-date
+				+font('Montserrat', 300)
+				font-size: 12px
+				color: #999
+				margin-top: 5px
+
+		.dribble-widget
+			width: 275px
+			.dribble-title
+				color: #fff
+				+font('Raleway', 700)
+				font-size: 23px
+			.dribble-block
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+			.dribble-img
+				margin-top: 15px
+.footer-bottom-bg
+	background: #111111				
+	.footer-bottom
+		+font('Montserrat', 300)
+		font-size: 13px
+		color: #555
+		display: flex
+		justify-content: space-between
+		.copyright
+			margin-top: 45px
+			margin-bottom: 30px
+			em
+				font-style: normal
+				color: #959595
+			a
+				text-decoration: none
+				color: inherit
+				margin-left: 5px
+				&:hover
+					color: #c7b299
+		.designby
+			margin-top: 45px
+			margin-bottom: 30px
+			em
+				font-style: normal
+				color: #959595
+
+
+
+@import "_media"
