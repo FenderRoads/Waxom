@@ -1,6 +1,7 @@
 @import "_fonts.sass"
 @import "_vars.sass"
 @import "_libs.sass"
+@import "_constructor.sass"
 
 *
 	padding: 0
@@ -46,6 +47,30 @@
 		background-color: darken($accent, 5%)
 		&::after
 			opacity: .32
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background: #e0e0e0
+	z-index: 12
+	border-radius: 10em
+	color: #666666
+	font-size: 24px
+	width: 60px
+	height: 60px
+	text-align: center
+	line-height: 60px
+	cursor: pointer
+	transition: all .25s ease
+	opacity: .5
+	&:hover
+		color: #ffffff
+		background-color: $accent
+		opacity: .9
+	&.active
+		right: 25px
+
 
 ::placeholder
 	color: #666

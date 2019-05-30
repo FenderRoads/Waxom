@@ -1,0 +1,30 @@
+.preloader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: #000;
+}
+.sk-spinner-pulse {
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  width: 7em;
+  height: 7em;
+  margin: auto;
+  background-color: $accent;
+  border-radius: 100%;
+  animation: sk-spinner-pulse 1.0s infinite ease-in-out;
+}
+
+@keyframes sk-spinner-pulse {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
