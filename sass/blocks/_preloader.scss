@@ -9,11 +9,13 @@
 }
 .sk-spinner-pulse {
   position: absolute;
-  left: 50%;
-  top: 50vh;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 7em;
   height: 7em;
-  margin: auto;
   background-color: $accent;
   border-radius: 100%;
   animation: sk-spinner-pulse 1.0s infinite ease-in-out;
